@@ -1,0 +1,23 @@
+server:
+  port: 9062
+spring:
+  application:
+    name: hystrix-feign-demo
+eureka:
+  instance:
+    instance-id: hystrix-ribbon-9062
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7070/eureka
+feign:
+  hystrix:
+    # 是否开启hystrix
+    enabled: true
+  client:
+    config:
+      default:
+        # 连接超时时间
+        connectTimeout: 5000
+        # 读取超时时间
+        readTimeout: 5000

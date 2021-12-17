@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-ribbon-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-ribbon-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-ribbon-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cousumer-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cousumer-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cousumer-ribbon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-discovery/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-ribbon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway-ha" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway-ha/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-gateway/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

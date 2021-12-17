@@ -1,0 +1,26 @@
+# 服务端口
+server:
+  port: 8080
+# 服务应用名
+spring:
+  application:
+    name: microservice-provider-demo
+# Eureka
+eureka:
+  instance:
+    # Eureka注册中心页面中status展示的值
+    instance-id: provider-8080
+    # Eureka注册中心页面中左下角info优先展示ip端口
+    prefer-ip-address: true
+    # 续约更新时间间隔（默认30秒）,这个是为了和服务端沟通的频率
+    lease-renewal-interval-in-seconds: 1
+    # 续约到期时间（默认90秒）,这个是服务端的耐心
+    lease-expiration-duration-in-seconds: 2
+  client:
+    # 指定注册中心的地址
+    service-url:
+      defaultZone: http://localhost:7070/eureka/
+
+
+
+

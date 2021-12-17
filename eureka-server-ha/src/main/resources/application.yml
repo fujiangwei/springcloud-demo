@@ -1,0 +1,9 @@
+# 服务应用名称
+spring:
+  application:
+    name: microservice-eureka-server-ha
+eureka:
+  client:
+    service-url:
+      # eureka-server-ha-7071,eureka-server-ha-7072,eureka-server-ha-7073 Eureka相互注册
+      defaultZone: http://eureka-server-ha-7071:7071/eureka/,http://eureka-server-ha-7072:7072/eureka/,http://eureka-server-ha-7073:7073/eureka/

@@ -1,0 +1,16 @@
+server:
+  port: 9071
+spring:
+  application:
+    name: microservice-discovery-ha-demo
+eureka:
+  instance:
+    hostname: discover-9071
+    instance-id: discover-9071
+    prefer-ip-address: true
+  client:
+    service-url:
+      # 集群(配置单个)
+      # defaultZone: http://eureka-server-ha-7071:7071/eureka/
+      defaultZone: http://eureka-server-ha-7071:7071/eureka/,http://eureka-server-ha-7072:7072/eureka/,http://eureka-server-ha-7073:7073/eureka/
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zuul-gateway" />
+        <module name="config-server" />
+        <module name="consumer-feign" />
+        <module name="consumer-feign-ha" />
+        <module name="zuul-gateway-ha" />
+        <module name="eureka-discovery-ha" />
+        <module name="eureka-server-ha" />
+        <module name="cousumer-ribbon" />
+        <module name="consumer-ribbon-ha" />
+        <module name="provider" />
+        <module name="hystrix" />
+        <module name="config-eureka-server" />
+        <module name="eureka-server" />
+        <module name="hystrix-feign" />
+        <module name="hystrix-ribbon" />
+        <module name="eureka-discovery" />
+        <module name="provider-hystrix" />
+        <module name="provider-ha" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config" target="1.5" />
+      <module name="config-eureka" target="1.5" />
+      <module name="consumer" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

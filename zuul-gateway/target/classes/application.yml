@@ -1,0 +1,45 @@
+server:
+  port: 6060
+spring:
+  application:
+    name: zuul-gateway-demo
+# eureka
+eureka:
+  instance:
+    # Eureka注册中心页面中status展示的值
+    instance-id: zuul-gateway-6060
+    # Eureka注册中心页面中左下角info优先展示ip端口
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7070/eureka/
+# zuul
+zuul:
+  # 请求前缀
+  prefix: /api
+  # 访问忽略的服务（不配置时http://127.0.0.1:6060/api/microservice-provider-demo/hello也可以访问）
+  # 若果想所有实际的服务应用名访问都忽略，可以配置成"*"
+  ignored-services: microservice-provider-demo,microservice-provider-hystrix-demo
+  routes:
+    provider-8080:
+      # 映射到此路由的服务ID
+      serviceId: microservice-provider-demo
+      # 映射路径对应的实际微服务地址（可以不配置）
+      # url: http://localhost:8080/
+      # 动态路由映射路径规则（http://127.0.0.1:6060/api/provider-8080-demo/*进行访问）
+      path: /provider-8080-demo/*
+    provider-8084:
+      # 映射到此路由的服务ID
+      serviceId: microservice-provider-hystrix-demo
+      # 映射路径对应的实际微服务地址（可以不配置）
+      # url: http://localhost:8080/
+      path: /provider-8084-demo/*
+    provider-ha:
+      # 映射到此路由的服务ID
+      serviceId: microservice-provider-ha-demo
+      # 映射路径对应的实际微服务地址（可以不配置）
+      # url: http://localhost:8080/
+      # 动态路由映射路径规则（http://127.0.0.1:6060/api/provider-8080-demo/*进行访问）
+      path: /provider-ha-demo/*
+
+

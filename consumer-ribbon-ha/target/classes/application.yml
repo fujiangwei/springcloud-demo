@@ -1,0 +1,18 @@
+# 服务端口
+server:
+  port: 9091
+spring:
+  application:
+    name: microservice-consumer-ribbon-ha-demo
+eureka:
+  instance:
+    instance-id: consumer-ribbon-ha-9091
+    prefer-ip-address: true
+  client:
+    # 不注册到EurekaServer中
+    register-with-eureka: false
+    service-url:
+      # 此处可以配置一个，副本之间数据会进行同步
+      # defaultZone: http://eureka-server-ha-7071:7071/eureka/
+      defaultZone: http://eureka-server-ha-7071:7071/eureka/,http://eureka-server-ha-7072:7072/eureka/,http://eureka-server-ha-7073:7073/eureka/
+

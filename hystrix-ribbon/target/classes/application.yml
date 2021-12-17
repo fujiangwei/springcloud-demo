@@ -1,0 +1,12 @@
+server:
+  port: 9061
+spring:
+  application:
+    name: hystrix-ribbon-demo
+eureka:
+  instance:
+    instance-id: hystrix-ribbon-9061
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7070/eureka/

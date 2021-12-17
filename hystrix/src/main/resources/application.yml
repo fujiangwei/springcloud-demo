@@ -1,0 +1,50 @@
+server:
+  port: 9060
+spring:
+  application:
+    name: hystrix-demo
+eureka:
+  instance:
+    instance-id: hystrix-demo-9060
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7070/eureka/
+
+hystrix:
+  command:
+    # 配置作用于全局，但是优先级会比指定commandKey的低
+    default:
+      execution:
+        isolation:
+          strategy: THREAD # THREAD：线程隔离， SEMAPHORE：信号量隔离；默认线程隔离
+          thread:
+            timeoutInMilliseconds: 400 #占用线程调用接口的超时时间
+    # commandKey，配置作用于指定的commandKey
+    commonCommand:
+      # 常用的熔断器配置
+      circuitBreaker:
+        enabled: true #默认为true，可不用配置
+        errorThresholdPercentage: 50 #一个监测周期（默认10s），请求失败率超过50%开启熔断器
+        requestVolumeThreshold: 10 #一个监测周期内，超过10个请求才进行进行容错率判断
+        sleepWindowInMilliseconds: 10000 #开启熔断器后过10s再尝试访问，默认5s
+      metrics:
+        rollingStats:
+          #注意 timeInMilliseconds % numBuckets 必须为0 否则会触发异常
+          timeInMilliseconds: 10000 #请求监测周期时长（单位 ms）,默认10000
+          numBuckets: 10 #每个监测周期，分为10个buckets，说白了就是 10秒的监测周期 分为十个buckets，每个buckets 1秒；每过一秒进行一次请求计算
+      # 常用的资源隔离配置
+      execution:
+        isolation:
+          strategy: THREAD # THREAD：线程隔离， SEMAPHORE：信号量隔离；默认线程隔离
+          thread:
+            timeoutInMilliseconds: 400 #占用线程调用接口的超时时间
+            interruptOnTimeout: true #占用线程超时 是否中断线程的执行
+          timeout:
+            enabled: true #开启超时限制
+          semaphore:
+            maxConcurrentRequests: 20 #信号量隔离下才有效，最大的信号量值，可以理解为 最大支持的并发数
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 20 #降级回调方法允许的最大调用

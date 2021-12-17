@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    # 激活xxx环境
+    active: test
+  application:
+    name: microservice-config-demo
+  cloud:
+    config:
+      server:
+        git:
+          # 仓库地址
+          uri: https://gitee.com/free-sky-king/springcloud-config-demo
+          # 对应 {label} 部分，即 Git 的分支
+          label: master
+          # 仓库文件夹名称，多个以逗号分隔
+          search-paths: springcloud-config-demo
+          # git 仓库用户名（公开库可以不用填写）
+          username:
+          # git 仓库密码（公开库可以不用填写）
+          password:
+eureka:
+  instance:
+    instance-id: config-demo-${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/
+
+---
+#测试环境配置
+spring:
+  profiles: test
+server:
+  port: 8091
+---
+#开发环境配置
+spring:
+  profiles: dev
+server:
+  port: 8092

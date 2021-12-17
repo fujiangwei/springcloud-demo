@@ -1,0 +1,15 @@
+# 服务端口
+server:
+  port: 6062
+# Eureka
+eureka:
+  instance:
+    hostname: zuul-gateway-ha-6062
+    # Eureka注册中心页面中status展示的值
+    instance-id: zuul-gateway-ha-6062
+    # Eureka注册中心页面中左下角info优先展示ip端口
+    prefer-ip-address: true
+
+
+
+

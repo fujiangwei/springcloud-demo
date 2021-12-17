@@ -1,0 +1,9 @@
+server:
+  port: 7073
+
+eureka:
+  instance:
+    hostname: eureka-server-ha-7073
+    instance-id: eureka-server-ha-7073
+    # 高可用环境下配置该项会导致集群副本（DS DS Replicas）会包含自己在内
+    # prefer-ip-address: true

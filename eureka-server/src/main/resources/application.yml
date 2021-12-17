@@ -1,0 +1,22 @@
+# 服务端口
+server:
+  port: 7070
+# Eureka实例配置
+eureka:
+  instance:
+    # 实例主机名
+    hostname: localhost
+  client:
+    # 是否将自己注册到EurekaServer上，默认为true。false表示自己不进行服务注册
+    register-with-eureka: false
+    # 是否从其他EurekaServer获取注册信息，默认为true。单节点不需要同步其他EurekaServer服务节点的数据，设置为false
+    fetch-registry: false
+    # 设置EurekaServer的地址
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#    # 关闭自我保护模式（缺省为打开,当关停一个服务，就会在Eureka面板看到一条警告）
+#    enable-self-preservation: false
+#    # 扫描失效服务的间隔时间1s（缺省为60*1000ms）
+#    eviction-interval-timer-in-ms: 1000
+

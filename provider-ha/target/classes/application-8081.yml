@@ -1,0 +1,14 @@
+# 服务端口
+server:
+  port: 8081
+# Eureka
+eureka:
+  instance:
+    hostname: provider-ha-8081
+    # Eureka注册中心页面中status展示的值
+    instance-id: provider-ha-8081
+    prefer-ip-address: true
+
+
+
+

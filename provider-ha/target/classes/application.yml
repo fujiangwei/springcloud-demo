@@ -1,0 +1,18 @@
+# 服务应用名
+spring:
+  application:
+    name: microservice-provider-ha-demo
+# Eureka
+eureka:
+  client:
+    # 指定注册中心的地址
+    service-url:
+      # 此处可以配置一个，副本之间数据会进行同步
+      # defaultZone: http://eureka-server-ha-7071:7071/eureka/
+      defaultZone: http://127.0.0.1:7070/eureka/
+      # defaultZone: http://eureka-server-ha-7071:7071/eureka/,http://eureka-server-ha-7072:7072/eureka/,http://eureka-server-ha-7073:7073/eureka/
+
+
+
+
+
